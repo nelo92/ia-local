@@ -1,0 +1,48 @@
+name: Local Config
+version: 1.0.0
+schema: v1
+models:
+  - name: Qwen2.5-coder Local
+    provider: ollama
+    model: qwen2.5-coder    
+    roles:
+      - chat
+      - edit
+      - autocomplete
+    requestOptions:      
+      extraBodyProperties:
+        think: false
+    defaultCompletionOptions:
+      maxTokens: 5000
+      temperature: 0.2 
+    apiBase: http://localhost:11434
+  - name: Qwen3 Local
+    provider: ollama
+    model: qwen3      
+    roles:
+      - chat
+      - edit
+      - autocomplete
+    requestOptions:
+      extraBodyProperties:
+        think: false      
+    apiBase: http://localhost:11434
+  - name: llama2 Local
+    provider: ollama
+    model: llama2      
+    roles:
+      - chat
+      - edit
+      - autocomplete
+    requestOptions:
+      extraBodyProperties:
+        think: false      
+    apiBase: http://localhost:11434
+context:
+  - provider: docs
+  - provider: codebase
+  - provider: diff
+  - provider: terminal
+  - provider: problems
+  - provider: folder  
+    
