@@ -28,17 +28,18 @@ docker pull ollama/ollama
 docker run -d -p 11434:11434 --name ollama ollama/ollama
 
 # Nvidia GPU
-docker run -d --gpus=all -p 11434:11434 --name ollama ollama/ollama
+docker run -d --gpus=all -p 11434:11434 --memory=16g --memory-swap=16g --name ollama ollama/ollama
 
 # Pull a model inside the container
 docker exec -it ollama ollama pull qwen2.5-coder
+docker exec -it ollama ollama pull qwen3-coder
+docker exec -it ollama ollama pull deepseek-coder-v2
 
 # Run a model inside the container
 
 docker exec -it ollama ollama run qwen2.5-coder
 docker exec -it ollama ollama run qwen3-coder
-docker exec -it ollama ollama run llama2
-docker exec -it ollama ollama run qwen3
+docker exec -it ollama ollama run deepseek-coder-v2
 
 # open-webui
 
