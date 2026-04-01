@@ -67,3 +67,12 @@ c:\users\nelo9\.vscode
 c:\users\nelo9\appdata\local\docker
 
 C:\Users\nelo9\ollama-data
+
+# continue.dev cli
+
+## Installation
+npm i -g @continuedev/cli
+
+## Lancement
+
+cn --config %userprofile%/.continue/config.yaml
