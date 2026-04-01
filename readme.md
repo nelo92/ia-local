@@ -28,7 +28,8 @@ docker pull ollama/ollama
 docker run -d -p 11434:11434 --name ollama ollama/ollama
 
 # Nvidia GPU
-docker run -d --gpus=all -p 11434:11434 --memory=16g --memory-swap=16g --name ollama ollama/ollama
+docker run -d --gpus=all -p 11434:11434 --memory=16g --memory-swap=16g --name ollama -v C:\Users\nelo9\ollama-data:/root/.ollama ollama/ollama serve
+
 
 # Pull a model inside the container
 docker exec -it ollama ollama pull qwen2.5-coder
@@ -48,3 +49,21 @@ docker rm -f ollama && docker rmi -f ollama/ollama
 
 # URL 
 http://localhost:11434
+
+
+# Attention avec la configuration de l'antivirus (bitdefender)
+Gerer les execption sur  :
+
+c:\dev\data
+
+c:\programdata\dockerdesktop
+
+c:\users\nelo9\.continue
+
+c:\users\nelo9\.docker
+
+c:\users\nelo9\.vscode
+
+c:\users\nelo9\appdata\local\docker
+
+C:\Users\nelo9\ollama-data
