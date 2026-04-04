@@ -17,9 +17,9 @@ models:
       maxTokens: 5000
       temperature: 0.2 
     apiBase: http://localhost:11434
-  - name: Qwen3 Local
+  - name: Qwen3-coder Local
     provider: ollama
-    model: qwen3      
+    model: qwen3-coder      
     roles:
       - chat
       - edit
@@ -29,9 +29,9 @@ models:
       extraBodyProperties:
         think: false      
     apiBase: http://localhost:11434
-  - name: llama2 Local
+  - name: Deepseek-coder-v2 Local
     provider: ollama
-    model: llama2      
+    model: deepseek-coder-v2      
     roles:
       - chat
       - edit
