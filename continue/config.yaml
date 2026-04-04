@@ -8,6 +8,7 @@ models:
     roles:
       - chat
       - edit
+      - apply
       - autocomplete
     requestOptions:      
       extraBodyProperties:
@@ -22,6 +23,7 @@ models:
     roles:
       - chat
       - edit
+      - apply
       - autocomplete
     requestOptions:
       extraBodyProperties:
@@ -33,11 +35,16 @@ models:
     roles:
       - chat
       - edit
+      - apply
       - autocomplete
     requestOptions:
       extraBodyProperties:
         think: false      
     apiBase: http://localhost:11434
+  - name: gemma-4-e4b-it Local LMStudio
+    provider: lmstudio
+    model: gemma-4-e4b-it    
+    apiBase: http://localhost:1234/v1/
 context:
   - provider: docs
   - provider: codebase
