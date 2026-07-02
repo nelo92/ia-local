@@ -2,54 +2,19 @@ name: Local Config
 version: 1.0.0
 schema: v1
 models:
-  - name: Qwen2.5-coder Local
-    provider: ollama
-    model: qwen2.5-coder    
-    roles:
-      - chat
-      - edit
-      - apply
-      - autocomplete
-    requestOptions:      
-      extraBodyProperties:
-        think: false
-    defaultCompletionOptions:
-      maxTokens: 5000
-      temperature: 0.2 
-    apiBase: http://localhost:11434
-  - name: Qwen3-coder Local
-    provider: ollama
-    model: qwen3-coder      
-    roles:
-      - chat
-      - edit
-      - apply
-      - autocomplete
-    requestOptions:
-      extraBodyProperties:
-        think: false      
-    apiBase: http://localhost:11434
-  - name: Deepseek-coder-v2 Local
-    provider: ollama
-    model: deepseek-coder-v2      
-    roles:
-      - chat
-      - edit
-      - apply
-      - autocomplete
-    requestOptions:
-      extraBodyProperties:
-        think: false      
-    apiBase: http://localhost:11434
-  - name: gemma-4-e4b-it Local LMStudio
+  - name: Autodetect
     provider: lmstudio
-    model: gemma-4-e4b-it    
-    apiBase: http://localhost:1234/v1/
-context:
-  - provider: docs
-  - provider: codebase
-  - provider: diff
-  - provider: terminal
-  - provider: problems
-  - provider: folder  
-    
+    model: AUTODETECT
+    apiBase: http://localhost:1234/v1
+  # - name: Qwen2.5-coder-14b
+  #   provider: lmstudio
+  #   model: qwen/qwen2.5-coder-14b
+  #   apiBase: http://localhost:1234/v1
+  # - name: gemma-4-e4b-it
+  #   provider: lmstudio
+  #   model: gemma-4-e4b-it
+  #   apiBase: http://localhost:1234/v1
+  # - name: devstral-small-2-2512
+  #   provider: lmstudio
+  #   model: devstral-small-2-2512
+  #   apiBase: http://localhost:1234/v1
